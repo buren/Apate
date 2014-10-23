@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+  # compute variance
+  Apate.compute_variance arr
+  Apate.compute_average arr
 
 ## Contributing
 
