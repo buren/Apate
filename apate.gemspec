@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Apate::VERSION
   spec.authors       = ["Albin Svensson"]
   spec.email         = ["albin.svensson@trialbee.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Provide tools for statistics computation.}
+  spec.description   = %q{Provide tools to be used when making statistical computations.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
