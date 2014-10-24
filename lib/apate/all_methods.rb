@@ -1,5 +1,7 @@
+require "apate/basic_methods"
+
 module Apate
-  module AllMethods
-    include BasicMethods
-  end
+
+  
+
 end
