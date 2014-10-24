@@ -32,13 +32,13 @@ describe Apate do
   describe 'estimate variance' do
 
     it 'should be able to estimate variance in an array' do
-      res = Apate.estimate_variance [1, 2, 3, 4, 5]
+      res = Apate.variance [1, 2, 3, 4, 5]
       expect(res).to eq(2.5)
     end
 
     it 'should return NaN if only one element in array' do
-      res = Apate.estimate_variance [1]
-      expect(res.nan?).to be_true
+      res = Apate.variance [1]
+      expect(res.nan?).to be_truthy
     end
 
   end
