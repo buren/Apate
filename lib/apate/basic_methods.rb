@@ -10,9 +10,9 @@ module Apate
 
   def self.variance arr
     m = self.average arr
-    s = 0.0
-    arr.each { |el| s += (el - m)**2 }
-    s/(arr.length - 1)
+  
+    arr = self.subtract(arr, m)
+    self.scalar_product(arr, arr).to_f/(arr.length-1)
   end
 
   def self.median arr

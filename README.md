@@ -20,9 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-  # compute variance
-  Apate.compute_variance arr
-  Apate.compute_average arr
+```ruby
+# compute variance
+Apate.compute_variance arr
+Apate.compute_average arr
+```
 
 ## Contributing
 

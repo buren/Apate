@@ -1,18 +1,25 @@
 module Apate
 
   def self.subtract(element, value)
-    if element.kind_of?(Array)
-      element.map do |e|
-        self.subtract(e, value)
-      end
-    else
-      element - value
-    end
+    self.element_wise_computing(:-, element, value)
   end
+
+  def self.add(element, value)
+    self.element_wise_computing(:+, element, value)
+  end
+
+  def self.multiply(element, value)
+    self.element_wise_computing(:*, element, value)
+  end
+
+  def self.divide(element, value)
+    self.element_wise_computing(:/, element, value.to_f)
+  end
+
 
   def self.scalar_product x, y
     return unless x.length == y.length
-    value = 0.0
+    value = 0
 
     x.each_with_index do |xi, i|
       value += xi*y[i]
@@ -20,5 +27,18 @@ module Apate
 
     value
   end
+
+
+  private
+
+    def self.element_wise_computing method, elements, value
+      if elements.kind_of?(Array)
+        elements.map do |e|
+          self.element_wise_computing(method, e, value)
+        end
+      else
+        elements.send(method, value)
+      end
+    end
 
 end
