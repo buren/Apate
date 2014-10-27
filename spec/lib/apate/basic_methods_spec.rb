@@ -40,7 +40,25 @@ describe Apate do
       res = Apate.variance [1]
       expect(res.nan?).to be_truthy
     end
+  
+  end
 
+  describe 'mode' do
+    it 'should be able to find the most frequent number in an array' do
+      res = Apate.mode([1,1,1,2,2,3,4,5])
+      expect(res).to eq(1)
+    end
+
+
+    it 'should select the lowest number if there are the same number of occurenses' do
+      res = Apate.mode([1,1,2,2,3,4,5])
+      expect(res).to eq(1)
+    end
+
+    it 'should be able to handle negative numbers' do
+      res = Apate.mode([-1,-1,-2,-2,-3,-4,-5])
+      expect(res).to eq(-1)
+    end
   end
 
 end

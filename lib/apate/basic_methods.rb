@@ -25,4 +25,11 @@ module Apate
     end
   end
 
+
+  def self.mode arr
+    freq = arr.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+    arr.max_by { |v| freq[v] }
+
+  end
+
 end

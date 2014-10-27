@@ -22,8 +22,9 @@ Or install it yourself as:
 
 ```ruby
 # compute variance
-Apate.compute_variance arr
-Apate.compute_average arr
+Apate.variance arr
+# compute average of an array
+Apate.average arr
 ```
 
 ## Contributing
