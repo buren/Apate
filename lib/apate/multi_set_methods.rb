@@ -9,7 +9,7 @@ module Apate
     xm = self.average x
     ym = self.average y
 
-    self.scalar_product(self.subtract(x, xm), self.subtract(y, ym))
+    self.scalar_product(self.subtract(x, xm), self.subtract(y, ym))/(xl.to_f - 1)
   end
 
 end

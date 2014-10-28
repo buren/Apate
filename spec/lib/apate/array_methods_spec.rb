@@ -46,5 +46,24 @@ describe Apate do
     end 
   end
 
+  it 'should be able to raise each element in an array to a power' do
+    res = Apate.pow [4,3,1], 2
+    expected = [16,9,1]
+
+    res.each_with_index do |r, i|
+      expect(r).to eq(expected[i])
+    end
+
+    res = Apate.pow [4,9,1], -1
+    expected = [1.0/4,1.0/9,1]
+
+    res.each_with_index do |r, i|
+      expect(r).to eq(expected[i])
+    end
+
+
+
+  end 
+
 
 end

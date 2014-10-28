@@ -16,6 +16,10 @@ module Apate
     self.element_wise_computing(:/, element, value.to_f)
   end
 
+  def self.pow(element, value)
+    self.element_wise_computing(:**, element, value.to_f)
+  end
+
 
   def self.scalar_product x, y
     return unless x.length == y.length
