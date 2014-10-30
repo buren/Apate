@@ -25,4 +25,18 @@ describe Apate do
 
   end
 
+
+  it 'should be able to add 2 2x2 matrices' do
+    a = [[1,0], [0,1]]
+    b = [[1,2], [3,4]]
+
+    c = [[2,2], [3,5]]
+
+    res = Apate.matrix_add a, b
+    expect(res.length).to eq(2)
+    expect(res.first.length).to eq(2)
+    expect(res).to eq(c)
+
+  end
+
 end

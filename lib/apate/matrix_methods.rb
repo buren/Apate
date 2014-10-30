@@ -8,6 +8,13 @@ module Apate
     (am*bm).data
   end
 
+  def self.matrix_add(a, b)
+    am = Matrix.new(a)
+    bm = Matrix.new(b)
+
+    (am+bm).data
+  end
+
   class Matrix
 
     def self.create_empty(rows, cols)
@@ -38,6 +45,10 @@ module Apate
       @data[row][col] = value
     end
 
+    def get row, col
+      @data[row][col]
+    end
+
     def get_columns
       columns = Array.new(cols).map { |_| Array.new(rows) }
       data.each_with_index do |row, row_i|
@@ -46,6 +57,17 @@ module Apate
         end
       end
       columns
+    end
+
+    def + b
+      c = Matrix.create_empty rows, b.cols
+
+      data.each_with_index do |row, row_i|
+        b.get_columns.each_with_index do |col, col_i|
+          c.set(row_i, col_i, get(row_i, col_i) + b.get(row_i, col_i))
+        end
+      end
+      c
     end
 
     def * b
