@@ -1,18 +1,21 @@
 module Apate
 
+  class << self
 
-  def self.matrix_multiply(a, b)
-    am = Matrix.new(a)
-    bm = Matrix.new(b)
+    def matrix_multiply(a, b)
+      am = Matrix.new(a)
+      bm = Matrix.new(b)
 
-    (am*bm).data
-  end
+      (am*bm).data
+    end
 
-  def self.matrix_add(a, b)
-    am = Matrix.new(a)
-    bm = Matrix.new(b)
+    def matrix_add(a, b)
+      am = Matrix.new(a)
+      bm = Matrix.new(b)
 
-    (am+bm).data
+      (am+bm).data
+    end
+
   end
 
   class Matrix
